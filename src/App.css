@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Bree Serif', serif;
+  font-family: 'Righteous', cursive;
   /* background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%); */
-  color: #fff;
-  background-color: black;
+  color: black;
+  background-color: white;
 
 }
 .coin-app{

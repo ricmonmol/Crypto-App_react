@@ -5,7 +5,7 @@ import Coin from './Coin';
 
 function App() {
   const [coins, setCoins] = useState([])
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(' ')
   
   useEffect(() => {
     {/*axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false')*/}
@@ -15,23 +15,67 @@ function App() {
        console.log(res.data)
     }).catch((error) => console.log(error))
   }, [])
-  
-  const handleChange = e => {
-    setSearch(e.target.value)
+
+  const filteredCoins = coins.filter(e => {
+    if(search === ' ') return coins
+    else { 
+      return e.name.toLowerCase().includes(search)
+    }
+  })
+
+  function handleSortCurrentPrice(){
+    const sortedCoins = [...coins].sort((a,b) => {
+      if(a.current_price > b.current_price ){
+        return -1
+      } else {
+        return 1
+      }
+    })
+    setCoins(sortedCoins)
   }
-  
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-    )
-  
+
+  function handleSortPriceChange(){
+    const sortedCoins = [...coins].sort((a,b) => {
+      if(a.price_change_percentage_24h > b.price_change_percentage_24h){
+        return -1
+      } else {
+        return 1 
+      }
+    })
+    setCoins(sortedCoins)
+  }
+
+  function handleSortMktCap(){
+    const sortedCoins = [...coins].sort((a,b) => {
+      if(a.market_cap > b.market_cap) {
+        return -1
+      } else {
+        return 1
+      }
+    })
+    setCoins(sortedCoins)
+  }
+
+  function handlerChange(e){
+    setSearch(e.target.value.toLowerCase())
+  }
+
   return (
     <div className="coin-app">
-      <div className="coin-search">
-        {/* <h1 className="coin-text">Search your desired coin</h1> */}
-        <form action="">
-          <input type="text" className="coin-input" placeholder="Provide the coin name" onChange={handleChange}/>
-        </form>
-      </div>
+      <h1 className='h1-title'>CRYPTOWATCHER</h1>
+      <form className='form-search'>
+        <input 
+          placeholder='Buscar crypto'
+          name='search'
+          onChange={handlerChange}
+          className='input-search'
+        />
+      </form>
+      <div className="order-btn-list">
+        <button className='order-btn' onClick={handleSortCurrentPrice}>Ordenar Precio</button>
+        <button className='order-btn' onClick={handleSortPriceChange}>Ordenar Variacion</button>
+        <button className='order-btn' onClick={handleSortMktCap}>Ordenar Capitalización</button>
+      </div>  
       {filteredCoins.map((coin) => {
         return(
           <Coin 

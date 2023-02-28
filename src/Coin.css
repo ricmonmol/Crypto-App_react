@@ -7,15 +7,13 @@
     flex-direction: row;
     justify-items: start;
     align-items: center;
-    height: 80px;
     border-bottom: 1px solid #d7d7d7;
-    width: 900px;
+    width: 80%;
+    padding: 10px;
 }
 .coin{
     display: flex;
     align-items: center;
-    padding: 24px;
-    min-width: 300px;
 }
 .coin img{
     height: 30px;
@@ -26,10 +24,7 @@
     font-size: 16px;
     width: 150px;
 }
-.coin-symbol{
-    text-transform: uppercase;
 
-}
 .coin-data{
     display: flex;
     text-align: center;
@@ -39,12 +34,15 @@
 .coin-price{
     width: 100%;
     margin: auto;
+    text-align: center;
 }
 .coin-volume{
     width: 230px;
 }
 .coin-marketcap{
     width: 100%;
+    margin: auto;
+    text-align: end;
 }
 .coin-percent{
     width: 100%;

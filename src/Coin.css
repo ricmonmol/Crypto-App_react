@@ -1,8 +1,9 @@
-.coin-container{
+.coinContainer{
     display: flex;
     justify-content: center;
 }
-.coin-row{
+
+.coinRowGreen{
     display: flex;
     flex-direction: row;
     justify-items: start;
@@ -10,6 +11,25 @@
     border-bottom: 1px solid #d7d7d7;
     width: 80%;
     padding: 10px;
+    transition: all .5s ease;
+}
+.coinRowGreen:hover{
+    background-color: lightgray;
+    box-shadow: 0 0 15px #11d811;
+}
+.coinRowRed{
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    border-bottom: 1px solid #d7d7d7;
+    width: 80%;
+    padding: 10px;
+    transition: all .5s ease;
+}
+.coinRowRed:hover{
+    background-color: lightgray;
+    box-shadow: 0 0 15px #f00606;
 }
 .coin{
     display: flex;
@@ -24,27 +44,26 @@
     font-size: 16px;
     width: 150px;
 }
-
-.coin-data{
+.coinData{
     display: flex;
     text-align: center;
     justify-content: space-between;
     width: 100%;
 }
-.coin-price{
+.coinPrice{
     width: 100%;
     margin: auto;
     text-align: center;
 }
-.coin-volume{
+.coinVolume{
     width: 230px;
 }
-.coin-marketcap{
+.coinMarketcap{
     width: 100%;
     margin: auto;
     text-align: end;
 }
-.coin-percent{
+.coinPercent{
     width: 100%;
     margin: auto;
 }

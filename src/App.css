@@ -6,26 +6,24 @@
   font-family: 'Roboto', sans-serif;
   /* background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%); */
   color: black;
-  background-color: white;
-
 }
-.coin-app{
+.coinApp{
   display: flex;
   flex-direction: column;
   color: #fff;
 }
 
-.form-search{
+.formSearch{
   margin: auto;
   padding: 25px;
 }
 
-.h1-title{
+.h1Title{
   margin: auto;
   padding: 40px 0 10px 0;
 }
 
-.order-btn-list{
+.orderBtnList{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -33,17 +31,17 @@
   margin: 10px 0 25px 0;
 }
 
-.order-btn{
+.orderBtn{
   border: none;
   border-bottom: black solid 2px;
   padding: 10px 25px 10px;
 }
 
-.order-btn:hover{
+.orderBtn:hover{
   background-color: lightgray;
 }
 
-.input-search{
+.inputSearch{
   padding: 10px;
   border-radius: 5px;
 }

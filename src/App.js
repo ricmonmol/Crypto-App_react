@@ -61,20 +61,20 @@ function App() {
   }
 
   return (
-    <div className="coin-app">
-      <h1 className='h1-title'>CRYPTOWATCHER</h1>
-      <form className='form-search'>
-        <input 
+    <div className='coinApp'>
+      <h1 id='title' className='h1Title'>CRYPTOWATCHER</h1>
+      <form className='formSearch'>
+        <input
           placeholder='Buscar crypto'
           name='search'
           onChange={handlerChange}
-          className='input-search'
+          className='inputSearch'
         />
       </form>
-      <div className="order-btn-list">
-        <button className='order-btn' onClick={handleSortCurrentPrice}>Ordenar Precio</button>
-        <button className='order-btn' onClick={handleSortPriceChange}>Ordenar Variacion</button>
-        <button className='order-btn' onClick={handleSortMktCap}>Ordenar Capitalización</button>
+      <div className='orderBtnList'>
+        <button className='orderBtn' onClick={handleSortCurrentPrice}>Ordenar Precio</button>
+        <button className='orderBtn' onClick={handleSortPriceChange}>Ordenar Variacion</button>
+        <button className='orderBtn' onClick={handleSortMktCap}>Ordenar Capitalización</button>
       </div>  
       {filteredCoins.map((coin) => {
         return(
@@ -89,6 +89,7 @@ function App() {
           />
         );
       })}
+      <a href='/#title'>&#8682;</a>
     </div>
   );
 }

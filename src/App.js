@@ -93,7 +93,7 @@ function App() {
           />
         );
       })}
-      <button className='btnGoTitle'><a href='/#title'>&#8682;</a></button>
+      {/*<button className='btnGoTitle'><a href='/#title'>&#8682;</a></button>*/}
     </div>
   );
 }

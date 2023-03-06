@@ -23,37 +23,38 @@ function App() {
     }
   })
 
-  function handleSortCurrentPrice(){
-    const sortedCoins = [...coins].sort((a,b) => {
-      if(a.current_price > b.current_price ){
-        return -1
-      } else {
-        return 1
-      }
-    })
-    setCoins(sortedCoins)
-  }
+  function handleSort(e){
+    if(e.target.value === 'orderCurrentPrice'){
+        const sortedCoins = [...coins].sort((a,b) => {
+          if(a.current_price > b.current_price ){
+          return -1
+          } else {
+          return 1
+          }
+        })
+      setCoins(sortedCoins)
+    }
+    if(e.target.value === 'orderPriceChange'){ 
+      const sortedCoins = [...coins].sort((a,b) => {
+        if(a.price_change_percentage_24h > b.price_change_percentage_24h){
+          return -1
+        } else {
+          return 1 
+        }
+      })
+      setCoins(sortedCoins)
+    }
 
-  function handleSortPriceChange(){
-    const sortedCoins = [...coins].sort((a,b) => {
-      if(a.price_change_percentage_24h > b.price_change_percentage_24h){
-        return -1
-      } else {
-        return 1 
-      }
-    })
-    setCoins(sortedCoins)
-  }
-
-  function handleSortMktCap(){
-    const sortedCoins = [...coins].sort((a,b) => {
-      if(a.market_cap > b.market_cap) {
-        return -1
-      } else {
-        return 1
-      }
-    })
-    setCoins(sortedCoins)
+    if(e.target.value ==='orderMktCap'){
+      const sortedCoins = [...coins].sort((a,b) => {
+        if(a.market_cap > b.market_cap) {
+          return -1
+        } else {
+          return 1
+        }
+      })
+      setCoins(sortedCoins)
+    }
   }
 
   function handlerChange(e){
@@ -72,9 +73,12 @@ function App() {
         />
       </form>
       <div className='orderBtnList'>
-        <button className='orderBtn' onClick={handleSortCurrentPrice}>Ordenar Precio</button>
-        <button className='orderBtn' onClick={handleSortPriceChange}>Ordenar Variacion</button>
-        <button className='orderBtn' onClick={handleSortMktCap}>Ordenar Capitalización</button>
+        <p>Ordenar por:</p><select onClick={handleSort}>
+          <option value='' disabled selected>Elija una opción</option>
+          <option value='orderCurrentPrice'>Por Precio</option>
+          <option value='orderPriceChange'>Por Variación de Precio</option>
+          <option value='orderMktCap'>Por Capitalización de Mercado</option>
+        </select>
       </div>  
       {filteredCoins.map((coin) => {
         return(
@@ -89,7 +93,7 @@ function App() {
           />
         );
       })}
-      <a href='/#title'>&#8682;</a>
+      <button className='btnGoTitle'><a href='/#title'>&#8682;</a></button>
     </div>
   );
 }

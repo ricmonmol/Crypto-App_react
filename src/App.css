@@ -26,22 +26,29 @@
 .orderBtnList{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin: 10px 0 25px 0;
 }
 
-.orderBtn{
-  border: none;
-  border-bottom: black solid 2px;
-  padding: 10px 25px 10px;
+.orderBtnList p{
+  margin-right: 10px;
 }
 
-.orderBtn:hover{
-  background-color: lightgray;
+.orderBtnList select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
 }
 
 .inputSearch{
   padding: 10px;
   border-radius: 5px;
+}
+
+.btnGoTitle{
+  margin: 50% 90%;
+  width: fit-content;
+  padding: 25px;
+  position: fixed;
 }

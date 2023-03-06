@@ -14,8 +14,8 @@
     transition: all .5s ease;
 }
 .coinRowGreen:hover{
-    background-color: lightgray;
-    box-shadow: 0 0 15px #11d811;
+    background-color: #efefef;
+    box-shadow: 0 0 4px #11d811;
 }
 .coinRowRed{
     display: flex;
@@ -28,8 +28,8 @@
     transition: all .5s ease;
 }
 .coinRowRed:hover{
-    background-color: lightgray;
-    box-shadow: 0 0 15px #f00606;
+    background-color: #efefef;
+    box-shadow: 0 0 4px #f00606;
 }
 .coin{
     display: flex;

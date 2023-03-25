@@ -1,3 +1,5 @@
 # A crypto coin monitor
 
+a forked from https://github.com/Megh2507/React-Crypto-App
+
 ## https://just-a-cryptowatcher.netlify.app/

@@ -81,3 +81,20 @@ input::placeholder {
   text-align: center;
   padding-bottom: 2em;
 }
+
+.linkGithub {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.linkGithub p {
+  margin: 0 0.7em;
+}
+
+.linkGithub img {
+  width: 1em;
+  margin: auto;
+}

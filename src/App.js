@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Coin from "./Coin";
+import githublogo from "./25231.png";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -80,6 +81,17 @@ function App() {
 
   return (
     <div className="coinApp">
+      <div>
+        <a
+          href="https://github.com/ricmonmol/Crypto-App_react"
+          target="_blank"
+          rel="noreferrer"
+          className="linkGithub"
+        >
+          <p>By: ricmonmol</p>
+          <img src={githublogo} alt="github logo" />
+        </a>
+      </div>
       <h1 id="title" className="h1Title">
         CRYPTOWATCHER
       </h1>

@@ -22,7 +22,7 @@
 .h1Title {
   font-size: 3em;
   margin: auto;
-  padding: 2em 0;
+  padding: 1em 0;
   font-family: "Righteous", sans-serif;
   background: linear-gradient(
     90deg,
@@ -37,6 +37,7 @@
 
 .inputSearch {
   padding: 0.8em;
+  border: none;
   border-radius: 5px;
   background: linear-gradient(
     90deg,
@@ -47,10 +48,12 @@
   );
   color: white;
 }
+.inputSearch:focus-visible {
+  outline: none;
+}
 
 input::placeholder {
   color: white;
-  font-weight: bold;
   font-style: italic;
 }
 
@@ -75,5 +78,6 @@ input::placeholder {
 }
 
 .pOrder {
-  margin: 0 0 1em 8em;
+  text-align: center;
+  padding-bottom: 2em;
 }

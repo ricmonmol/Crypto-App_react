@@ -1,75 +1,81 @@
-.coinContainer{
-    display: flex;
-    justify-content: center;
+.coinContainer {
+  display: flex;
+  justify-content: center;
 }
 
-.coinRowGreen{
-    display: flex;
-    flex-direction: row;
-    justify-items: start;
-    align-items: center;
-    border-bottom: 1px solid #d7d7d7;
-    width: 80%;
-    padding: 10px;
-    transition: all .5s ease;
+.coinRowGreen {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  border-bottom: 1px solid #d7d7d7;
+  width: 80%;
+  padding: 10px;
+  transition: all 0.5s ease;
+  margin: auto;
 }
-.coinRowGreen:hover{
-    background-color: #efefef;
-    box-shadow: 0 0 4px #11d811;
+.coinRowGreen:hover {
+  background-color: #efefef;
+  box-shadow: 0 2px 0 #11d811;
 }
-.coinRowRed{
-    display: flex;
-    flex-direction: row;
-    justify-items: start;
-    align-items: center;
-    border-bottom: 1px solid #d7d7d7;
-    width: 80%;
-    padding: 10px;
-    transition: all .5s ease;
+.coinRowRed {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  border-bottom: 1px solid #d7d7d7;
+  width: 80%;
+  padding: 10px;
+  transition: all 0.5s ease;
+  margin: auto;
 }
-.coinRowRed:hover{
-    background-color: #efefef;
-    box-shadow: 0 0 4px #f00606;
+.coinRowRed:hover {
+  background-color: #efefef;
+  box-shadow: 0 2px 0 #f00606;
 }
-.coin{
-    display: flex;
-    align-items: center;
+.coin {
+  display: flex;
+  align-items: center;
 }
-.coin img{
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
+.coin img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
 }
-.coin h1{
-    font-size: 16px;
-    width: 150px;
+.coin h1 {
+  font-size: 16px;
+  width: 150px;
 }
-.coinData{
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
+.coinData {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
 }
-.coinPrice{
-    width: 100%;
-    margin: auto;
-    text-align: center;
+.coinPrice {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
-.coinVolume{
-    width: 230px;
+.coinVolume {
+  width: 230px;
 }
-.coinMarketcap{
-    width: 100%;
-    margin: auto;
-    text-align: end;
+.coinMarketcap {
+  width: 100%;
+  margin: auto;
+  text-align: end;
 }
-.coinPercent{
-    width: 100%;
-    margin: auto;
+.coinPercent {
+  width: 100%;
+  margin: auto;
 }
-.red{
-    color: #f00606;
+.red {
+  color: #f00606;
 }
-.green{
-    color: #11d811;
+.green {
+  color: #11d811;
+}
+
+.coinTable {
+  width: 100%;
 }

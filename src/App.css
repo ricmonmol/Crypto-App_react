@@ -42,10 +42,9 @@
   border-radius: 5px;
   background: linear-gradient(
     90deg,
-    rgba(110, 109, 123, 1) 3%,
-    rgba(78, 139, 161, 1) 29%,
-    rgba(45, 170, 201, 1) 70%,
-    rgba(0, 212, 255, 1) 89%
+    rgba(252, 176, 69, 1) 0%,
+    rgba(238, 161, 161, 1) 50%,
+    rgba(60, 102, 184, 1) 100%
   );
   color: white;
 }

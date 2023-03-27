@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +21,7 @@
 }
 
 .h1Title {
-  font-size: 3em;
+  font-size: 4vw;
   margin: auto;
   padding: 1em 0;
   font-family: "Righteous", sans-serif;
@@ -97,4 +98,42 @@ input::placeholder {
 .linkGithub img {
   width: 1em;
   margin: auto;
+}
+
+@media (max-width: 900px) {
+  .btnTitle {
+    width: 105%;
+  }
+  .h1Title {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .pOrder {
+    text-align: start;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    border-bottom: solid thin black;
+    width: fit-content;
+  }
+  .btnTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1Title {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .btnTitle {
+    width: fit-content;
+    margin-bottom: 2em;
+  }
+
+  .h1Title {
+    font-size: 9vw;
+  }
 }

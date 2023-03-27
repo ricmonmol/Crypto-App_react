@@ -79,3 +79,30 @@
 .coinTable {
   width: 100%;
 }
+
+@media (max-width: 650px) {
+  .coinRowGreen,
+  .coinRowRed {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .coinData {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: auto;
+  }
+
+  .coinPrice,
+  .coinMarketcap {
+    text-align: start;
+  }
+
+  @media (max-width: 411px) {
+    .coin {
+      width: 7.5em;
+      margin-left: -2em;
+    }
+  }
+}
